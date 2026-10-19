@@ -50,3 +50,7 @@ This extension asks for `<all_urls>`, `scripting`, `tabs` and `debugger`. Any pr
 3. Start your desk server on `127.0.0.1:8766`. The badge turns into **P** once it pairs, and shows **…** while the desk is down or **!** if another Chrome profile holds the desk.
 
 `EXT_VERSION` appears as a literal in both `background.js` and `content.js`, and has to match `manifest.json`. That's deliberate: it is how a stale content script left in an open tab gets spotted and re-injected.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
