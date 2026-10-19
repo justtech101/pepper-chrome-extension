@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "PEPPER",
+  "version": "1.47.8",
+  "description": "Pepper drives your Chrome. Watch and control stay on with no toggles. Auto-pairs to the Pepper desk on 127.0.0.1:8766. Send, pay, and post stay blocked. v1.19.0: can see and save page media, so a generated video is reachable.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms",
+    "scripting",
+    "debugger"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8766/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_origin_as_fallback": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PEPPER"
+  }
+}

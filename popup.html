@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>PEPPER</title>
+<style>
+  body {
+    font-family: -apple-system, Segoe UI, system-ui, sans-serif;
+    width: 300px;
+    padding: 14px;
+    background: #111318;
+    color: #eee;
+  }
+  h1 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #e8461a;
+    letter-spacing: 0.08em;
+  }
+  .row {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0 0;
+  }
+  .pill {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 6px;
+    background: #1a1d24;
+    color: #9aa0a8;
+  }
+  .pill.live {
+    background: #1e3a2f;
+    color: #6dffa8;
+  }
+  .pill.wait {
+    background: #2a2418;
+    color: #ffd27a;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    background: #2d89ff;
+    color: #fff;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  p {
+    font-size: 11.5px;
+    line-height: 1.45;
+    opacity: 0.8;
+    margin: 10px 0 0;
+  }
+</style>
+</head>
+<body>
+  <h1>PEPPER</h1>
+  <div class="row">
+    <div id="watchPill" class="pill">Watch …</div>
+    <div id="controlPill" class="pill">Control …</div>
+  </div>
+  <button id="reconnect" type="button">Reconnect to Pepper desk</button>
+  <p id="status">Checking…</p>
+  <script src="popup.js"></script>
+</body>
+</html>
